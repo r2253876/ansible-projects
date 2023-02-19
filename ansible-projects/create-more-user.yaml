@@ -1,0 +1,13 @@
+# this is my create user demofile
+- hosts: all
+  name: my test playbook
+  become: yes
+  connection: ssh
+  tasks:
+    - name: adding users
+      user:
+        name: hari
+      user:
+        name: pavan
+        
+            

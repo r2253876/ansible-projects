@@ -1,0 +1,10 @@
+- hosts: all
+  become: yes
+  connection: ssh
+  tasks:
+    - name: remove package into hosts
+      yum:
+        name: tree
+        state: removed
+        name: docker
+        state: present

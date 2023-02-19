@@ -1,0 +1,12 @@
+# this is my create directory demofile
+- hosts: all
+  name: my test playbook
+  become: yes
+  connection: ssh
+  tasks:
+    - name: creating directory
+      file:
+        path: /home/ansible/hari
+        state: directory
+        
+            

@@ -1,0 +1,16 @@
+# this is my task demofile
+- hosts: all
+  become: yes
+  connection: ssh
+  tasks:
+    - name: installing httpd on webservers
+      yum:
+        name: httpd
+        state: installed
+    - name: removing mysql on dbservers
+      yum:
+        name: mysql
+        state: absent
+
+          #ignore_errors: yes
+            

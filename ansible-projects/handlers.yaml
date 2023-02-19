@@ -1,0 +1,12 @@
+- hosts: all
+  become: yes
+  connection: ssh
+  tasks:
+    - name: installing httpd into hosts
+      yum:
+        name: httpd
+        state: present
+    - name: start httpd service
+      service:      
+        name: httpd
+        state: started

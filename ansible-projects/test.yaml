@@ -1,0 +1,13 @@
+# this is my demofile
+- hosts: all
+  become: yes
+  tasks:
+    - name: installing httpd on webservers
+      yum:
+        name: httpd
+        state: removed
+    - name: installing mysql on dbservers
+      yum:
+        name: mysql
+        state: present
+            

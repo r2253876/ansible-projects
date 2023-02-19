@@ -1,0 +1,11 @@
+# this is my create user demofile
+- hosts: all
+  name: my test playbook
+  become: yes
+  connection: ssh
+  tasks:
+    - name: installing httpd on webservers
+      user:
+        name: hari
+        
+            
